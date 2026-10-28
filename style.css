@@ -1,0 +1,121 @@
+
+* { box-sizing: border-box; }
+
+:root {
+  --green: #236b60;
+  --ink: #183c39;
+  --cream: #f7f5ef;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--ink);
+}
+
+a { text-decoration: none; color: inherit; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  border-bottom: 1px solid #e5e7e2;
+}
+
+.brand { font-size: 24px; font-weight: bold; }
+nav { display: flex; gap: 25px; font-size: 14px; }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 65px 7%;
+  background: var(--cream);
+}
+
+h1 { font-size: clamp(40px, 5vw, 68px); line-height: 1.1; }
+h1 span { color: var(--green); }
+.eyebrow { color: var(--green); font-size: 11px; font-weight: bold; letter-spacing: 2px; }
+.hero p:not(.eyebrow) { line-height: 1.8; color: #62736d; max-width: 470px; }
+
+.hero-image {
+  min-height: 390px;
+  border-radius: 150px 150px 12px 12px;
+  background: linear-gradient(0deg, #183c3940, #183c3905),
+  url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=80") center/cover;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--green);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section { padding: 65px 7%; }
+h2 { font-size: 34px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  min-height: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: white;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card h3 { margin-bottom: 0; font-size: 27px; }
+.card p { margin-bottom: 0; }
+
+.coorg {
+  background-image: linear-gradient(0deg, #102c28c9, transparent),
+  url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=700&q=80");
+}
+.jaipur {
+  background-image: linear-gradient(0deg, #102c28c9, transparent),
+  url("https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=700&q=80");
+}
+.kerala {
+  background-image: linear-gradient(0deg, #102c28c9, transparent),
+  url("https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=700&q=80");
+}
+
+.planner { background: #eaf1ec; }
+form {
+  max-width: 600px;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  display: grid;
+  gap: 17px;
+}
+label { display: grid; gap: 8px; font-size: 14px; font-weight: bold; }
+input, select { padding: 12px; border: 1px solid #d5dfd8; border-radius: 6px; font: inherit; }
+#trip-result { max-width: 600px; margin-top: 18px; padding: 20px; background: white; border-radius: 8px; line-height: 1.7; }
+footer { padding: 25px 7%; border-top: 1px solid #e5e7e2; }
+
+@media (max-width: 700px) {
+  .navbar { flex-wrap: wrap; gap: 15px; }
+  nav { width: 100%; justify-content: space-between; gap: 10px; }
+  .hero { grid-template-columns: 1fr; padding: 45px 6%; }
+  .hero-image { min-height: 300px; }
+  .section { padding: 45px 6%; }
+  .cards { grid-template-columns: 1fr; }
+}

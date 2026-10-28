@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TripNest | Travel, Thoughtfully Planned</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#">✦ TripNest</a>
+    <nav>
+      <a href="#destinations">Destinations</a>
+      <a href="#planner">Plan a trip</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+        <h1>Less planning.<br><span>More exploring.</span></h1>
+        <p>Discover destinations and plan personalized journeys with AI-assisted ideas and human guidance.</p>
+        <a class="button" href="#planner">Plan my trip ↗</a>
+      </div>
+      <div class="hero-image" role="img" aria-label="Mountain landscape"></div>
+    </section>
+
+    <section id="destinations" class="section">
+      <p class="eyebrow">FIND YOUR INSPIRATION</p>
+      <h2>Places worth the journey.</h2>
+      <div class="cards">
+        <article class="card coorg"><h3>Coorg</h3><p>Karnataka</p></article>
+        <article class="card jaipur"><h3>Jaipur</h3><p>Rajasthan</p></article>
+        <article class="card kerala"><h3>Kerala</h3><p>God's Own Country</p></article>
+      </div>
+    </section>
+
+    <section id="planner" class="planner section">
+      <h2>Let's plan your next trip.</h2>
+      <p>Tell us what you have in mind to create a travel brief.</p>
+
+      <form id="trip-form">
+        <label>Destination
+          <input id="destination" placeholder="e.g. Coorg" required>
+        </label>
+        <label>Number of days
+          <select id="days">
+            <option value="2">2 days</option>
+            <option value="3" selected>3 days</option>
+            <option value="5">5 days</option>
+            <option value="7">7 days</option>
+          </select>
+        </label>
+        <label>Budget in rupees
+          <input id="budget" type="number" min="1000" placeholder="15000" required>
+        </label>
+        <button class="button" type="submit">Create my trip brief</button>
+      </form>
+      <div id="trip-result" aria-live="polite" hidden></div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>Travel, thoughtfully planned.</h2>
+      <p>TripNest is a proposed independent travel-tech startup combining smart planning with personalized service.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 TripNest · Academic website prototype</footer>
+</body>
+</html>
